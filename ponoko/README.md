@@ -18,7 +18,7 @@ A drawing of my design is shown here
 ![Tri-Bahtinov drawing](https://github.com/cytan299/tribahtinov/blob/master/pics/tribahtinov_dwg.png)
 
 Other formats for the Tri-Bahtinov mask can be found in the
-[other formats](https://github.com/cytan299/tribahtinov/blob/master/pics/other_formats) directory.
+[other formats](https://github.com/cytan299/tribahtinov/blob/master/other_formats) directory.
 
 ## Copyright
 

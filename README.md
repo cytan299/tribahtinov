@@ -14,8 +14,8 @@ to see a really clear Airy disk.
   be. I think my overly optimistic judgement of the Airy disk pattern
   makes this method a collimation challenge for me.
 
-And thus, these above two reasons motivated me to create a less
-judgemental way for collimation.
+And thus, these two reasons motivated me to create a less judgemental
+way for collimation.
 
 ## The idea
 

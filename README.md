@@ -87,8 +87,9 @@ which I show below
 ![Pattern as found](https://github.com/cytan299/tribahtinov/blob/master/pics/collimated.png)
 
 Once I completed the above exercise, I can achieve focus of my LX200
-for all three orientations. And thus my objective for reducing
-arbitrariness in collimation has been achieved!
+for all three orientations and in effect, my LX200 is now
+collimated. And thus my objective for reducing arbitrariness in
+collimation has been achieved!
 
 ## Directory structure
 

@@ -1,4 +1,4 @@
-# Tri-Bahtinov Mask for Aiding Collimation and Focusing of Schmidt Cassegrain Telescopes
+# A Tri-Bahtinov Mask for Aiding Collimation and Focusing of Schmidt Cassegrain Telescopes
 
 In my opinion, the Bahtinov mask is one of the most useful inventions
 for astrophotography. The traditional use of a Bahtinov mask is for

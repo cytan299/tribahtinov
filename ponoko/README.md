@@ -1,7 +1,7 @@
 # The Ponoko manufacture file
 
 The _tribatinov.svg_ file contains the design file that can be sent
-to [Ponoko](http://www.ponoko.com) for manufacture. This design is for
+to [Ponoko](http://www.ponoko.com) to be laser cut. This design is for
 the 8" classic Meade LX200 telescope. It should be relatively easy to
 rescale the design for other telescope sizes.
 
@@ -9,7 +9,8 @@ I have chosen the smallest angle between the diffraction spikes to be 10 deg.
 
 To see the design, you must zoom in because the stroke width is 0.01
 mm as required by Ponoko. You have to delete the Copright layer before
-sending to Ponoko as well.
+sending to Ponoko as well. The material that I chose for the mask is 3
+mm Black Acrylic in P2 size.
 
 A drawing of my design is shown here
 ![Tri-Bahtinov drawing](https://github.com/cytan299/tribahtinov/blob/master/pics/tribahtinov_dwg.png)

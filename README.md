@@ -90,6 +90,13 @@ Once I completed the above exercise, I can achieve focus of my LX200
 for all three orientations. And thus my objective for reducing
 arbitrariness in collimation has been achieved!
 
+## Directory structure
+
+* **ponoko** My Tri-Bahtinov mask that can be sent to
+[Ponoko](http://www.ponoko.com) to be laser cut.
+* **pics** Image files for this repository.
+
+
 ## Copyright
 
 All the documentation, pictures, and design that I have here is

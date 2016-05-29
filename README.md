@@ -106,9 +106,17 @@ that I wanted!
 * **maskulator_movie** directory that contains the avi movie from
   maskulator that shows how the Tri-Bahtinov diffraction pattern
   changes when the focusing changes.
+* **python** My python script for generating my Tri-Bahtinov mask
+  for any telescope. Please see the README.md file in that directory
+  for instructions for how to install and use the python script.
 
 ## Copyright
 
 All the documentation, pictures, movies and design that I have here is
 copyright 2016 C.Y. Tan and released under Creative Commons
 Attribution-ShareAlike 3.0 Unported License.
+
+All software is released under GPLv3
+
+
+

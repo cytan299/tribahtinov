@@ -108,7 +108,7 @@ that I wanted!
   changes when the focusing changes.
 * **python** My python script for generating my Tri-Bahtinov mask
   for any telescope. Please see the README.md file in that directory
-  for instructions for how to install and use the python script.
+  for instructions for its installation and usage.
 
 ## Copyright
 

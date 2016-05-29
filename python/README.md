@@ -21,7 +21,7 @@ python get-pip.py
 * **cairocffi** For my python script to work, it is necessary to
   install the [cairocffi](https://github.com/SimonSapin/cairocffi)
   library. Do the following to install it:
-  ```
+```
   sudo -H pip install cairocffi
 ```
 

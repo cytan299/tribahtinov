@@ -23,6 +23,11 @@ python get-pip.py
   library. Do the following to install it:
 ```
   sudo -H pip install cairocffi
+  ```
+* **cairo** On _Mac OS X_, you have to install
+[macports][http://www.macports.org] and then install cairo
+```
+sudo port install cairo
 ```
 
 ## Copyright

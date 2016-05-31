@@ -72,27 +72,21 @@ collimation screw to adjust.
 ## Results
 
 My as found diffraction pattern when I point my LX200 at Polaris,
-magnified 400x and integrated for 2 seconds is shown below
-![Pattern as found](https://github.com/cytan299/tribahtinov/blob/master/pics/as_found.png)
-It is clear that although the LX200 is close to focus for two
-orientations, there is one orientation (indicated with red arrows)
-that is clearly not in focus. The clarity of this diffraction pattern
-shows that there is not arbitrariness as to whether the SCT is
-collimated or not in this case: it is definitely not collimated.
+magnified 400x and integrated for 0.5 seconds for the Airy disk and 4
+seconds for the Tri-Bahtinov are shown below
+![Pattern as found](https://github.com/cytan299/tribahtinov/blob/master/pics/asfound.png)
+It is clear that my LX200 is badly mis-collimated from the Airy
+diffraction pattern. For the Tri-Bahtinov diffraction pattern, I can
+get two directions that are close to focus but in one Bahtinov spike orientation,
+indicated in the picture, is clearly not in focus. In fact, this orientation is in the
+same direction that the donut shadow that is also off-centered.
 
-Now, since this is the first time that I have used the Tri-Bahtinov mask, I
-spent nearly an hour messing around to find the optimum collimation
-screw setting. One problem that I have found was that the defocused Bahtinov
-diffraction pattern shown above is associated with the collimation screw that
-wants to be made tighter and tighter. I bottomed out this screw and thus had
-to loosen it, i.e. made collimation worse and then use the other two screws
-to compensate. I found a good setting (although still not quite perfect)
-which I show below
-![Pattern as found](https://github.com/cytan299/tribahtinov/blob/master/pics/collimated.png)
+After using the collimation screws to move the Airy disk to the center
+and using the Tri-Bahtinov mask to fine tune each orientation, I got a
+my LX200 to be very well collimated
+![Pattern as found](https://github.com/cytan299/tribahtinov/blob/master/pics/corrected.png)
 
-Once I completed the above exercise, I can achieve focus of my LX200
-for all three orientations and in effect, my LX200 is now
-collimated. My collimation exercise with the Tri-Bahtinov mask allowed
+Thus, my collimation exercise with the Tri-Bahtinov mask allowed
 me to achieve collimation with minimal arbitrariness. This is the goal
 that I wanted!
 
@@ -106,9 +100,10 @@ that I wanted!
 * **maskulator_movie** directory that contains the avi movie from
   maskulator that shows how the Tri-Bahtinov diffraction pattern
   changes when the focusing changes.
-* **python** My python script for generating my Tri-Bahtinov mask
-  for any telescope. Please see the README.md file in that directory
-  for instructions for its installation and usage.
+* **python** (Work in progress! Nothing uploaded yet) My python script
+  for generating my Tri-Bahtinov mask for any telescope. Please see
+  the README.md file in that directory for instructions for its
+  installation and usage.
 
 ## Copyright
 

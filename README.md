@@ -82,8 +82,8 @@ indicated in the picture, is clearly not in focus. In fact, this orientation is 
 same direction that the donut shadow that is also off-centered.
 
 After using the collimation screws to move the Airy disk to the center
-and using the Tri-Bahtinov mask to fine tune each orientation, I got a
-my LX200 to be very well collimated
+and using the Tri-Bahtinov mask to fine tune each orientation, I got 
+my LX200 to be very well collimated (might still be a smidgen off from perfection)
 ![Pattern as found](https://github.com/cytan299/tribahtinov/blob/master/pics/corrected.png)
 
 Thus, my collimation exercise with the Tri-Bahtinov mask allowed

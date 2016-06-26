@@ -106,7 +106,13 @@ that I wanted!
   the required python libraries in order for _generate.py_ to work.
 * **releases** For most users, you will download the executables for
   _Mac OS X_ and _Windows_ in the
-  [releases](https://github.com/cytan299/tribahtinov/releases) directory.
+  [releases](https://github.com/cytan299/tribahtinov/releases)
+  directory.
+
+## How to use the mask
+
+I have written the instructions for using the mask in the
+[wiki](https://github.com/cytan299/tribahtinov/wiki/A-Tri-Bahtinov-Mask-for-Aiding-Collimation-and-Focusing-of-Schmidt-Cassegrain-Telescopes).
 
 ## Copyright
 

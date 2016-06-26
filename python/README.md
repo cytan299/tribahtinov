@@ -47,7 +47,7 @@ python get-pip.py
   sudo -H pip install cairocffi
   ```
 * **cairo** Finally, you have to install
-[macports][http://www.macports.org] and then install cairo
+[macports][http://www.macports.org] and then install _cairo_
 ```
 sudo port install cairo
 ```
@@ -58,7 +58,7 @@ _Windows_.
 
 * **python** (Python)[https://www.python.org/downloads/] must be
   installed. I use version 2.7.10 which is the version that also comes
-  with _Mac OS X_.
+  with _Mac OS X_. 
 * **pip** _pip_ comes with the the _python_ installation.
 * **Microsoft Visual C++ Compiler for Python 2.7** Before installing
   _cairocffi_, you must also have installed. You can download it

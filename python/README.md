@@ -78,6 +78,25 @@ To run _generate.py_, you can do the following:
 python generate.py
 ```
 
+## Generating executables
+
+I generated _Mac OS X_ and _Windows_ executables using
+[PyInstaller](http://www.pyinstaller.org/). _PyInstaller_ is installed
+with the following command
+```
+pip install pyinstaller
+```
+I generate the executables using
+```
+pyinstaller --onefile generate.py
+```
+The _build_ directory contains the executable _generate_
+created by _pyinstaller_.
+
+I bundle the _generate_ that I created on both _Mac OS X_ and
+_Windows_ platforms in the
+[release](https://github.com/cytan299/tribahtinov/releases) directory.
+
 ## Copyright
 
 The software that is written by the author is copyright 2016 C.Y. Tan

@@ -94,7 +94,7 @@ that I wanted!
 
 * **ponoko** My Tri-Bahtinov mask that can be sent to
 [Ponoko](http://www.ponoko.com) to be laser cut.
-* **other_formats** My Tri-Batinov mask in other formats so that you
+* **other_formats** My Tri-Bahtinov mask in other formats so that you
   can print it out or edit it. 
 * **pics** Image files for this repository.
 * **maskulator_movie** directory that contains the avi movie from

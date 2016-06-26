@@ -95,7 +95,7 @@ created by _pyinstaller_.
 
 I bundle the _generate_ that I created on both _Mac OS X_ and
 _Windows_ platforms in the
-[release](https://github.com/cytan299/tribahtinov/releases) directory.
+[releases](https://github.com/cytan299/tribahtinov/releases) directory.
 
 ## Copyright
 

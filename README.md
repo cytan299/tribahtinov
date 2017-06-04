@@ -121,7 +121,7 @@ I have written the instructions for using the mask in the
 Here's the link to a Tri-Bahtinov mask generator that is written by
 Satoru Takagi:
 
-[A Tri-Bahtinov mask generator](http://svg2.mbsrv.net/astro/Tri-Bahtinov.html)
+[Satoru Takagi's Tri-Bahtinov mask generator](http://svg2.mbsrv.net/astro/Tri-Bahtinov.html)
 
 Thanks to Satoru Takagi, you can use his webapp to generate the mask rather
 than download and install my program to do this.

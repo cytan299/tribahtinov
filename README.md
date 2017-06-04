@@ -1,5 +1,7 @@
 # A Tri-Bahtinov Mask for Aiding Collimation and Focusing of Schmidt Cassegrain Telescopes
 
+## Introduction
+
 In my opinion, the Bahtinov mask is one of the most useful inventions
 for astrophotography. The traditional use of a Bahtinov mask is for
 focusing a telescope only and is not used for collimation of an SCT.
@@ -113,6 +115,17 @@ that I wanted!
 
 I have written the instructions for using the mask in the
 [wiki](https://github.com/cytan299/tribahtinov/wiki/A-Tri-Bahtinov-Mask-for-Aiding-Collimation-and-Focusing-of-Schmidt-Cassegrain-Telescopes).
+
+## A Tri-Bahtinov mask generator on the web
+
+Here's the link to a Tri-Bahtinov mask generator that is written by
+Satoru Takagi:
+
+[A Tri-Bahtinov mask generator](http://svg2.mbsrv.net/astro/Tri-Bahtinov.html)
+
+Thanks to Satoru Takagi, you can use his webapp to generate the mask rather
+than download and install my program to do this.
+
 
 ## Copyright
 

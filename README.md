@@ -1,3 +1,5 @@
+<p align="right">Language: English, <a href="translations/README_JA.md">Japanese</a></p>
+
 # A Tri-Bahtinov Mask for Aiding Collimation and Focusing of Schmidt Cassegrain Telescopes
 
 ## Introduction
@@ -57,7 +59,7 @@ degrees. This simulation confirms my hypothesis that a Tri-Bahtinov
 produces a diffraction pattern that has three orientations for
 checking the focus.
 
-![Theoretical Diffraction Pattern](https://github.com/cytan299/tribahtinov/blob/master/pics/theory.png)
+![Theoretical Diffraction Pattern](pics/theory_small.png)
 
 ## Implementation
 
@@ -110,6 +112,7 @@ that I wanted!
   _Mac OS X_ and _Windows_ in the
   [releases](https://github.com/cytan299/tribahtinov/releases)
   directory.
+* **translations** Documents translated into languages other than English are stored.
 
 ## How to use the mask
 

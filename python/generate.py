@@ -20,11 +20,15 @@
     along with derot.  If not, see <http://www.gnu.org/licenses/>.
 """
 
+# Acknowledgements:
+# The author would like to thank Satoru Takagi for his
+# contributions for improving generate.py. (25 Jun 2017)
+#
 __author__ = "C.Y. Tan"
 __copyright__ = "Copyright 2016, C.Y. Tan"
 __credits__ = [""]
 __license__ = "GPL"
-__version__ = "0.1"
+__version__ = "0.2"
 __maintainer__ = "C.Y. Tan"
 __email__ = "cytan299@yahoo.com"
 __status__ = "alpha"
@@ -92,6 +96,7 @@ tri_w = 0.3071*INCH2PIXELS; # inches, width of each slit
 # constants that the user does not change
 tri_stem_w = 0.2362*INCH2PIXELS; # inches, width of each supporting stem
 tri_out_w = 0.4375*INCH2PIXELS; # inches, width of the outer support
+tri_in_w = 0.2362*INCH2PIXELS; # inches, width of the inner support
 
 tri_mount_hole_r = 0.075*INCH2PIXELS; # mounting hole size
 
@@ -564,7 +569,28 @@ focal_length = input("Enter focal length of the telescope in mm = ");
 print "focal length = ", focal_length, " mm"
 focal_length = focal_length/25.4*INCH2PIXELS; # convert to inches
 
-tri_w = focal_length/BAHTINOV_FACTOR;
+fixed_stem = raw_input("Do you use fixed stem width? (y/N):");
+if ( fixed_stem == "y" ) :
+    w_stem_ratio = 0;
+    print "fixed stem width:",tri_stem_w/INCH2PIXELS,"in";
+else:
+    set_stem_ratio = raw_input("Do you set slit:stem ratio? (y/N):");
+    if ( set_stem_ratio == "y" ) :
+        w_stem_ratio = input("Enter slit:stem ratio 1:");
+    else:
+        w_stem_ratio = 1;
+    print "slit:stem = 1:",w_stem_ratio;
+
+spacing = focal_length/BAHTINOV_FACTOR;
+if ( w_stem_ratio == 0 ):
+    if ( spacing - tri_stem_w > tri_stem_w * 0.5 ) :
+        tri_w = spacing - tri_stem_w
+    else:
+        tri_w = spacing / 3;
+        tri_stem_w = 2 * spacing / 3;
+else:
+    tri_w = spacing / ( w_stem_ratio + 1 );
+    tri_stem_w = w_stem_ratio * spacing / ( w_stem_ratio + 1 );
 
 tri_outb_r = input("Enter outer radius of mask in inches = ");
 print "tri_outb_r = ", tri_outb_r, " inches";
@@ -581,7 +607,7 @@ PAPER_MAX_X = (2*tri_outb_r)*1.2;
 PAPER_MAX_Y = (2*tri_outb_r)*1.2;
 
 tri_out_r = tri_outb_r - tri_out_w;
-tri_in_r = tri_inb_r + tri_stem_w;
+tri_in_r = tri_inb_r + tri_in_w;
 
 #######################################################
 # Define the CAIRO surface and context that will be drawn to

@@ -126,6 +126,14 @@ Satoru Takagi:
 Thanks to Satoru Takagi, you can use his webapp to generate the mask rather
 than download and install my program to do this.
 
+## Acknowledgements
+
+The author would like to thank Satoru Takagi (25 Jul 2017) for his contributions for
+improving _generate.py_. His contributions added the following options
+for the user:
+
+* setting the stem width
+* setting the ratio between the slit and stem widths.
 
 ## Copyright
 

@@ -24,11 +24,23 @@
 # The author would like to thank Satoru Takagi for his
 # contributions for improving generate.py. (25 Jun 2017)
 #
+"""
+    7/2/2017 Extended by Satoru Takagi
+    getHalfAreaPoint:
+    Implemented a function to compute the boundary points so that
+    the area of the region occupied by upper right slits is equal
+    to that of lower right slits.
+
+    7/17/2017 Extended by Satoru Takagi
+    up_down_boundary_stem:
+    Implemented boundary stem option
+"""
+
 __author__ = "C.Y. Tan"
 __copyright__ = "Copyright 2016, C.Y. Tan"
 __credits__ = [""]
 __license__ = "GPL"
-__version__ = "0.2"
+__version__ = "0.3"
 __maintainer__ = "C.Y. Tan"
 __email__ = "cytan299@yahoo.com"
 __status__ = "alpha"
@@ -102,6 +114,10 @@ tri_mount_hole_r = 0.075*INCH2PIXELS; # mounting hole size
 
 tri_angle = 10*pi/180; # radians
 
+# Added 07/02/2017 for area equalizer and boundary stem builder
+equalize_area = False; # Flag to equalize area of right upper region and right lower region.
+up_down_boundary_stem = False; # Flag to create boundary stems.
+up_down_boundary_stem_ratio = 0.66; # The ratio of advance to the up side when creating boundary stems. Since the lower size of the boundary stem works somewhat as upper slot, it is set larger than half.
 
 ########################################################
 # draw_slots_left(   - draws the slots on the left
@@ -220,19 +236,31 @@ def draw_slots_right_up(cr):
     cr.rotate(-tri_angle);
 
     spacing = (tri_stem_w + tri_w);    
-    y = -tri_w/2.0;
+
+    udbds = 0;
+    if ( up_down_boundary_stem ):
+      udbds = tri_stem_w * up_down_boundary_stem_ratio;
+
+    if ( equalize_area ):
+      half_point = getHalfAreaPoint(tri_in_r, tri_out_r);
+      ylast = half_point + udbds;
+      ystart = half_point + spacing + udbds;
+    else:
+      ystart = -tri_w/2.0 + udbds;
+      y = ystart;
+      while y < tri_out_r:
+        if ( y < ((tri_out_r + tri_in_r)/2.0 - tri_w)) :
+          ylast = y;
+        y += spacing;
+
+    y = ystart;
     while y < tri_out_r:
-      if ( y > ((tri_out_r + tri_in_r)/2.0 - tri_w)) :
+      if ( equalize_area or y > ((tri_out_r + tri_in_r)/2.0 - tri_w)) :
         cr.rectangle(-1*INCH2PIXELS, -y, 6*INCH2PIXELS, -tri_w);
       y += spacing;
 
     # draw only the 3 sides of the rectangle and leave the bottom undrawn
     # find the position of this last slot
-    y = -tri_w/2.0;
-    while y < tri_out_r:
-      if ( y < ((tri_out_r + tri_in_r)/2.0 - tri_w)) :
-        ylast = y;
-      y += spacing;
 
     cr.move_to(-tri_outb_r, -ylast);
     cr.line_to(-tri_outb_r, -ylast - tri_w);
@@ -272,6 +300,8 @@ def draw_slots_right_up(cr):
     cr.arc(0,0, tri_out_r, theta0, theta1);
  # kill last boundary (cytan)
  #   cr.line_to(tri_stem_w/2.0, -xy0[1]);    
+    if ( up_down_boundary_stem ):
+      cr.line_to(xy0[0], -xy0[1]);
 
     cr.stroke();
 
@@ -281,7 +311,11 @@ def draw_slots_right_up(cr):
     cr.set_source_rgb(1,1,1);
     cr.rotate(-tri_angle);
 
-    y = tri_w/2.0;
+    if ( equalize_area ):
+      y = ystart-tri_stem_w ;
+    else:
+      y = tri_w/2.0 + udbds;
+
     while y < tri_out_r :
       cr.rectangle(-tri_outb_r, -y, 2*tri_outb_r, -tri_fw);
       y += spacing;
@@ -345,6 +379,23 @@ def draw_slots_right_down(cr):
     cr.rotate(tri_angle);
 
     spacing = (tri_stem_w + tri_w);    
+
+    udbds = 0;
+    if ( up_down_boundary_stem ):
+      udbds = tri_stem_w * (1.0 - up_down_boundary_stem_ratio);
+
+    # find the position of this start and last slot
+    if ( equalize_area ):
+      half_point = getHalfAreaPoint(tri_in_r, tri_out_r);
+      ylast = half_point - udbds;
+    else:
+      y = -tri_w/2.0;
+      while y < tri_out_r:
+        if ( y < ((tri_out_r + tri_in_r)/2.0 - tri_w)) :
+          ylast = y;
+        y += spacing;
+      ylast -= udbds;
+
     y = -tri_w/2.0;
     while y < tri_out_r:
 #      if (y < ((tri_out_r + tri_in_r)/2.0)) :
@@ -358,13 +409,6 @@ def draw_slots_right_down(cr):
 
     cr.set_operator(cairo.OPERATOR_DEST_IN);
     cr.set_source_rgba(0,0,0,1);
-
-    # find the position of this last slot
-    y = -tri_w/2.0;
-    while y < tri_out_r:
-      if ( y < ((tri_out_r + tri_in_r)/2.0 - tri_w)) :
-        ylast = y;
-      y += spacing;    
 
     [xy0, xy1] = get_mask_top_boundary(ylast, tri_angle);
 
@@ -389,7 +433,11 @@ def draw_slots_right_down(cr):
     # boundaries
     cr.set_operator(cairo.OPERATOR_OVER);
 
-    cr.move_to(xy1[0], -xy1[1]);
+    if ( up_down_boundary_stem ):
+      cr.move_to(xy0[0], -xy0[1]);
+      cr.line_to(xy1[0], -xy1[1]);
+    else:
+      cr.move_to(xy1[0], -xy1[1]);
  
     theta0 = -atan2(xy1[1], xy1[0]);
     theta1 = -(atan2(tri_stem_w/2.0, tri_out_r) + pi/6.0);
@@ -422,21 +470,23 @@ def draw_slots_right_down(cr):
     cr.rotate(-tri_angle);
 
     #
-    cr.set_operator(cairo.OPERATOR_XOR);
-    cr.set_source_rgba(0,0,0,1);
-    [xy0, xy1] = get_mask_top_boundary(ylast, tri_angle);
-    cr.move_to(xy0[0], -xy0[1]);
-    cr.line_to(xy1[0], -xy1[1]);
-    cr.set_line_width(3);    
-    cr.stroke();
-
-    cr.set_operator(cairo.OPERATOR_XOR);    
-    cr.set_source_rgba(0,0,0,1);
-    [xy0, xy1] = get_mask_top_boundary(ylast, tri_angle);
-    cr.move_to(xy0[0], -xy0[1]);
-    cr.line_to(xy1[0], -xy1[1]);
-    cr.set_line_width(3);
-    cr.stroke();
+    if ( not up_down_boundary_stem ):
+      cr.set_operator(cairo.OPERATOR_XOR);
+      cr.set_source_rgba(0,0,0,1);
+      [xy0, xy1] = get_mask_top_boundary(ylast, tri_angle);
+      cr.move_to(xy0[0], -xy0[1]);
+      cr.line_to(xy1[0], -xy1[1]);
+      cr.set_line_width(3);    
+      cr.stroke();
+      
+      cr.set_operator(cairo.OPERATOR_XOR);    
+      cr.set_source_rgba(0,0,0,1);
+      [xy0, xy1] = get_mask_top_boundary(ylast, tri_angle);
+      cr.move_to(xy0[0], -xy0[1]);
+      cr.line_to(xy1[0], -xy1[1]);
+      cr.set_line_width(3);
+      cr.stroke();
+    
     cr.set_line_width(1);
 
     
@@ -552,6 +602,44 @@ def draw_inner_boundary(cr):
 
   return;
 
+########################################################
+# A function that calculates the boundary line starting point 
+# so that the areas of right upper slits and lower slits are
+# equal (06/13/2017 by Satoru Takagi)
+# A description of this equation can be found in areaEqualize.pdf.
+# This function uses the Bisection Method to obtain an approximate
+# solution of the nonlinear equation for this matter.
+########################################################
+def getHalfAreaPoint(rInner, rOuter):
+  theta = getTheta(rInner, rOuter);
+  point = getL(theta,rInner, rOuter);
+  return ( point );
+
+def getTheta(ri,ro):
+  tu = pi / 3.0;
+  td = 0.0;
+  # Bisection Method : assume that it converged in 30 iterations...
+  for i in range(0, 30): 
+    tc = (tu + td)/2.0;
+    difu = getPointDif(tu , ri , ro );
+    difc = getPointDif(tc , ri , ro );
+    difd = getPointDif(td , ri , ro );
+    
+    if ( difu * difc < 0 ):
+      tu = tu;
+      td = tc;
+    else :
+      tu = tc;
+      td = td;
+  return ( tc );
+
+def getPointDif(theta,ri,ro):
+  ans = theta - sin(theta) * cos(theta) + sin(theta) * sin(theta) * tan( 10.0 * pi / 180.0 ) - ( pi / 6.0 ) * ( 1.0 - ( ri * ri ) / ( ro * ro ) ) ;
+  return ( ans );
+
+def getL(theta,ri,ro):
+  ans = ro * ( cos(theta) - sin(theta) * tan( 10.0 * pi / 180.0 ) );
+  return ( ans );
 
 ########################################################
 # main entry point
@@ -580,6 +668,14 @@ else:
     else:
         w_stem_ratio = 1;
     print "slit:stem = 1:",w_stem_ratio;
+
+equalize_area_input = raw_input("Do you equalize areas of right upper/lower region? (y/N):");
+if ( equalize_area_input == "y" ) :
+  equalize_area = True;
+
+boundary_stem_input = raw_input("Do you build boundary stem? (y/N):");
+if ( boundary_stem_input == "y" ) :
+  up_down_boundary_stem = True;
 
 spacing = focal_length/BAHTINOV_FACTOR;
 if ( w_stem_ratio == 0 ):

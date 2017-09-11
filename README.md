@@ -119,6 +119,13 @@ that I wanted!
 I have written the instructions for using the mask in the
 [wiki](https://github.com/cytan299/tribahtinov/wiki/A-Tri-Bahtinov-Mask-for-Aiding-Collimation-and-Focusing-of-Schmidt-Cassegrain-Telescopes).
 
+## Discussion group
+
+There is an active discussion group that the I monitor. You can post
+to
+[Cloudy Nights::Equipment::A Tri-Bahtinov mask for SCT collimation and focusing](https://www.cloudynights.com/topic/536410-a-tri-bahtinov-mask-for-sct-collimation-and-focusing/)
+to get community help.
+
 ## A Tri-Bahtinov mask generator on the web
 
 Here's the link to a Tri-Bahtinov mask generator that is written by
@@ -131,7 +138,7 @@ than download and install my program to do this.
 
 ## Acknowledgements
 
-The author would like to thank Satoru Takagi (25 Jul 2017) for his contributions for
+I would like to thank Satoru Takagi (25 Jul 2017) for his contributions for
 improving _generate.py_. His contributions added the following options
 for the user:
 

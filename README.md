@@ -128,7 +128,7 @@ Newtonians. Please see their posts [here](https://www.cloudynights.com/topic/536
 I have written the instructions for using the mask in the
 [wiki](https://github.com/cytan299/tribahtinov/wiki/A-Tri-Bahtinov-Mask-for-Aiding-Collimation-and-Focusing-of-Schmidt-Cassegrain-Telescopes).
 
-Satoru Takagi has posted instructions for collimating a Newtonian at
+Satoru Takagi has posted instructions for collimating a Newtonian 
 [here](https://www.cloudynights.com/topic/536410-a-tri-bahtinov-mask-for-sct-collimation-and-focusing/page-4). I
 have reproduced his instructions in the [wiki](https://github.com/cytan299/tribahtinov/wiki/A-Tri-Bahtinov-Mask-for-Aiding-Collimation-and-Focusing-of-Schmidt-Cassegrain-Telescopes).
 

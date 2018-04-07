@@ -1,13 +1,14 @@
 <p align="right">Language: English, <a href="translations/README_JA.md">Japanese</a></p>
 
-# A Tri-Bahtinov Mask for Aiding Collimation and Focusing of Schmidt Cassegrain Telescopes
+# A Tri-Bahtinov Mask for Aiding Collimation and Focusing of Schmidt Cassegrain, Ritchey Chretien and Newtonian Telescopes
 
 ## Introduction
 
 In my opinion, the Bahtinov mask is one of the most useful inventions
 for astrophotography. The traditional use of a Bahtinov mask is for
-focusing a telescope only and is not used for collimation of an SCT.
-For collimating an SCT, the method that is commonly used is the
+focusing a telescope only and is not used for collimation of reflector
+type telescopes like SCTs, RCs and Newtonians.
+For collimating a reflector, the method that is commonly used is the
 [Airy disk method](http://www.astrophoto.fr/collim.html). I have found
 this method to be quite onerous because
 
@@ -25,7 +26,7 @@ way for collimation.
 
 Since the standard Bahtinov mask is such a useful tool for focusing, I
 thought that there must be a way to use it for collimation as
-well. My idea is as follows:
+well. My idea when applied to an SCT is as follows:
 
 For an SCT, that is well collimated, I would expect that the path
 length travelled by light rays from the primary mirror reflected to
@@ -94,6 +95,14 @@ Thus, my collimation exercise with the Tri-Bahtinov mask allowed
 me to achieve collimation with minimal arbitrariness. This is the goal
 that I wanted!
 
+## Use on RCs and Newtonians
+
+The contribution from the community at Cloudy Nights has been
+tremendous! I had only thought of using the Tri-Bahtinov on my SCT,
+but users like Richard (alias "frantolmy") and Satoru Takagi (alias
+"Psittacula") have shown that the Tri-Bahtinov also works on RCs and
+Newtonians. Please see their posts [here](https://www.cloudynights.com/topic/536410-a-tri-bahtinov-mask-for-sct-collimation-and-focusing/)
+
 ## Directory structure
 
 * **ponoko** My Tri-Bahtinov mask that can be sent to
@@ -118,6 +127,10 @@ that I wanted!
 
 I have written the instructions for using the mask in the
 [wiki](https://github.com/cytan299/tribahtinov/wiki/A-Tri-Bahtinov-Mask-for-Aiding-Collimation-and-Focusing-of-Schmidt-Cassegrain-Telescopes).
+
+Satoru Takagi has posted instructions for collimating a Newtonian at
+[here](https://www.cloudynights.com/topic/536410-a-tri-bahtinov-mask-for-sct-collimation-and-focusing/page-4). I
+have reproduced his instructions in the [wiki](https://github.com/cytan299/tribahtinov/wiki/A-Tri-Bahtinov-Mask-for-Aiding-Collimation-and-Focusing-of-Schmidt-Cassegrain-Telescopes).
 
 ## Discussion group
 

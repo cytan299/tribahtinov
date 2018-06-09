@@ -13,10 +13,10 @@ For collimating a reflector, the method that is commonly used is the
 this method to be quite onerous because
 
 * due to atmospherics at my observation location, I have never been able
-to see a really clear Airy disk. 
+to see a really clear diffraction pattern of the defocused star or Airy disk. 
 * when I adjust the collimating screws to centre the doughnut hole, my
   judgement is rather arbitrary and not as objective as it should
-  be. I think my overly optimistic judgement of the Airy disk pattern
+  be. I think my overly optimistic judgement of the diffraction pattern
   makes this method a collimation challenge for me.
 
 And thus, these two reasons motivated me to create a less judgemental
@@ -77,16 +77,17 @@ collimation screw to adjust.
 ## Results
 
 My as found diffraction pattern when I point my LX200 at Polaris,
-magnified 400x and integrated for 0.5 seconds for the Airy disk and 4
+magnified 400x and integrated for 0.5 seconds for the diffraction
+pattern of the defocused star and 4
 seconds for the Tri-Bahtinov are shown below
 ![Pattern as found](https://github.com/cytan299/tribahtinov/blob/master/pics/asfound.png)
-It is clear that my LX200 is badly mis-collimated from the Airy
+It is clear that my LX200 is badly mis-collimated from the 
 diffraction pattern. For the Tri-Bahtinov diffraction pattern, I can
 get two directions that are close to focus but in one Bahtinov spike orientation,
 indicated in the picture, is clearly not in focus. In fact, this orientation is in the
 same direction that the donut shadow that is also off-centered.
 
-After using the collimation screws to move the Airy disk to the center
+After using the collimation screws to move the diffraction pattern to the center
 and using the Tri-Bahtinov mask to fine tune each orientation, I got 
 my LX200 to be very well collimated (might still be a smidgen off from perfection)
 ![Pattern as found](https://github.com/cytan299/tribahtinov/blob/master/pics/corrected.png)

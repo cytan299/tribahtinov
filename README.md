@@ -122,6 +122,7 @@ Newtonians. Please see their posts [here](https://www.cloudynights.com/topic/536
   _Mac OS X_ and _Windows_ in the
   [releases](https://github.com/cytan299/tribahtinov/releases)
   directory.
+* **pre-made** There are pre-made masks in _svg_ format for some popular telescopes.
 * **translations** Documents translated into languages other than English are stored.
 
 ## How to use the mask

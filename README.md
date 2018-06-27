@@ -102,7 +102,14 @@ The contribution from the community at Cloudy Nights has been
 tremendous! I had only thought of using the Tri-Bahtinov on my SCT,
 but users like Richard (alias "frantolmy") and Satoru Takagi (alias
 "Psittacula") have shown that the Tri-Bahtinov also works on RCs and
-Newtonians. Please see their posts [here](https://www.cloudynights.com/topic/536410-a-tri-bahtinov-mask-for-sct-collimation-and-focusing/)
+Newtonians. Please see their posts
+[here](https://www.cloudynights.com/topic/536410-a-tri-bahtinov-mask-for-sct-collimation-and-focusing/)
+
+## Tri-Bathinov Grabber
+
+K. Evans' has created a [Tri-Bahtinov
+Grabber program](https://github.com/1CM69/Tri-Bahtinov_Grabber) to
+objectively help with focusing and collimation.
 
 ## Directory structure
 
@@ -122,8 +129,13 @@ Newtonians. Please see their posts [here](https://www.cloudynights.com/topic/536
   _Mac OS X_ and _Windows_ in the
   [releases](https://github.com/cytan299/tribahtinov/releases)
   directory.
+* **cover_generator** The cover generators written in python that are
+  useful when used in conjunction with K. Evans' [Tri-Bahtinov
+Grabber program](https://github.com/1CM69/Tri-Bahtinov_Grabber). 
 * **pre-made** There are pre-made masks in _svg_ format for some popular telescopes.
-* **translations** Documents translated into languages other than English are stored.
+* **translations** Documents translated into languages other than
+English are stored.
+
 
 ## How to use the mask
 
@@ -159,6 +171,17 @@ for the user:
 
 * setting the stem width
 * setting the ratio between the slit and stem widths.
+
+Satoru has also invented an improved version of the Tri-Bahtinov which
+can be found
+[here](http://svg2.mbsrv.net/astro/Tri-Bahtinov_symmetric.html).
+
+Ever since publication of the Tri-Bahtinov mask, the support from the
+community has been fantastic. For example, K. Evans has created a [Tri-Bahtinov
+Grabber program](https://github.com/1CM69/Tri-Bahtinov_Grabber) to
+objectively help with focusing and collimation. As part of the support
+for this program, I have written python cover generators for both the
+original and improved Tri-Bahtinov masks.
 
 ## Copyright
 

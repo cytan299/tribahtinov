@@ -74,6 +74,19 @@ these screws to align with the collimation screws on the secondary
 mirror. I can then mask one of the three Bahtinov sub-masks to determine which
 collimation screw to adjust.
 
+## Improved Tri-Bahtinov mask invented by S. Takagi
+
+S. Takagi has improved the original mask which can be found
+[here](http://svg2.mbsrv.net/astro/Tri-Bahtinov_symmetric.html). This
+improved mask is more sensitive to any focus errors than the original
+mask.
+
+Although I don't show the results of the improved mask here, the
+method for using the mask that is outlined in the
+[wiki](https://github.com/cytan299/tribahtinov/wiki/A-Tri-Bahtinov-Mask-for-Aiding-Collimation-and-Focusing-of-Schmidt-Cassegrain-Telescopes)
+is still applicable.
+
+
 ## Results
 
 My as found diffraction pattern when I point my LX200 at Polaris,
